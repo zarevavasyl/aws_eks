@@ -1,3 +1,8 @@
+# Create a Iam Role
+
+# TODO: Output name in variable
+
+
 resource "aws_iam_role" "demo" {
   name = "eks-cluster-demo"
 
@@ -38,7 +43,9 @@ resource "aws_eks_cluster" "demo" {
   depends_on = [aws_iam_role_policy_attachment.demo-AmazonEKSClusterPolicy]
 }
 
-# ____________________________
+# Create a EKS Cluster
+
+# TODO: Output name, instance types, max_size and min_size in variable
 
 resource "aws_iam_role" "nodes" {
   name = "eks-node-group-nodes"
